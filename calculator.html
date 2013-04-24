@@ -9,14 +9,25 @@
       input = "";
 
       function handleClick(data) {
+        if (data == 'c'){
+          document.getElementById("output").value = 0
+          console.log(0)
+        }
+        else
+        {
         input += data;
         document.getElementById("output").value = input;
         console.log(input)
+        }
       }
 
       function evaluateExpression(data) {
         input = document.getElementById("output").value = eval(input);
+         // console.log(input)
       }
+
+    
+
     </script>
 
     <h1>My Amazing Javascript / HTML Calculator</h1>
@@ -24,7 +35,7 @@
     <div id="calculator">
 
       <form>
-        <input type="text" id="output" />
+        <input type="text" id="output" style="width: 100px;" />
       </form>
 
       <button onclick="handleClick(1)">1</button>
@@ -40,6 +51,7 @@
       <button onclick="handleClick('-')">-</button>
       <button onclick="handleClick('/')">/</button>
       <button onclick="handleClick('*')">*</button>
+      <button onclick="handleClick('c')">c</button>
       <button onclick="evaluateExpression()">=</button>
     </div>
 
