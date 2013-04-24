@@ -9,6 +9,24 @@
       input = "";
 
       function handleClick(data) {
+
+        // switch(data) {
+        //   case c:
+        //   document.getElementById("output").value = 0;
+        //   console.log(0)
+        //   break;
+
+        //   case '=':
+        //   input = document.getElementById("output").value = eval(input);
+        //   console.log(input);
+        //   break;
+
+        //   default:
+        //   input += data
+        //   document.getElementById("output").value = input;
+        //   console.log(input)
+        //   break; 
+        // }
         if (data == 'c'){
           document.getElementById("output").value = 0
           console.log(0)
@@ -23,7 +41,7 @@
 
       function evaluateExpression(data) {
         input = document.getElementById("output").value = eval(input);
-         // console.log(input)
+       
       }
 
     
@@ -52,7 +70,9 @@
       <button onclick="handleClick('/')">/</button>
       <button onclick="handleClick('*')">*</button>
       <button onclick="handleClick('c')">c</button>
+    <!--   <button onclick="handleClick('x2')">x2</button> -->
       <button onclick="evaluateExpression()">=</button>
+
     </div>
 
   </body>
